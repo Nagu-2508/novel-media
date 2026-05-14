@@ -33,7 +33,7 @@
       }
     ],
     "publishedDate": "2024-03-10",
-    "reads": 1247
+    "reads": 1249
   },
   {
     "id": "2",
@@ -119,5 +119,30 @@
     "reviews": [],
     "publishedDate": "2024-05-01",
     "reads": 756
+  },
+  {
+    "id": "0f022303-833f-4212-a44a-6541d37e9ea8",
+    "title": "Hero",
+    "author": "Virat",
+    "genre": "Romance",
+    "coverColor": "#EC4899",
+    "summary": "Herione dead",
+    "chapters": [
+      {
+        "title": "Chapter 1",
+        "content": "Naga is the hero and he beat the villian and virat kohli appraised him"
+      }
+    ],
+    "reviews": [
+      {
+        "id": "33026a65-639c-4084-a743-9f566ae3336d",
+        "reviewer": "siva",
+        "rating": 5,
+        "comment": "fantastic",
+        "date": "2026-05-14"
+      }
+    ],
+    "publishedDate": "2026-05-14",
+    "reads": 4
   }
 ]
