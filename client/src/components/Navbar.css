@@ -1,0 +1,50 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0;
+}
+.navbar-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+}
+.navbar-brand {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em;
+  transition: opacity var(--transition-fast);
+}
+.navbar-brand:hover { opacity: 0.85; }
+.brand-icon { font-size: 1.6rem; }
+.brand-accent { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.navbar-links { display: flex; align-items: center; gap: 8px; }
+.nav-link {
+  padding: 8px 18px; border-radius: var(--radius-sm);
+  font-weight: 500; font-size: 0.95rem; color: var(--text-secondary);
+  transition: all var(--transition-fast); position: relative;
+}
+.nav-link:hover { color: var(--text-primary); background: var(--bg-glass); }
+.nav-link.active { color: var(--accent-primary); }
+.nav-link.active::after {
+  content: ''; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
+  width: 20px; height: 2px; background: var(--accent-primary); border-radius: 2px;
+}
+.nav-cta { margin-left: 12px; }
+.hamburger { display: none; background: none; flex-direction: column; gap: 5px; padding: 8px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all var(--transition-fast); }
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .navbar-links {
+    position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+    flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+    background: rgba(10, 10, 15, 0.95); backdrop-filter: blur(20px);
+    transform: translateX(100%); transition: transform var(--transition-medium);
+  }
+  .navbar-links.open { transform: translateX(0); }
+  .nav-link { font-size: 1.2rem; padding: 12px 24px; }
+  .nav-cta { margin-left: 0; margin-top: 12px; }
+}

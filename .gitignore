@@ -1,0 +1,25 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.env
+
+# Build
+dist/
+build/
+.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local data (if you want to exclude your local DB file)
+# server/data/novels.json

@@ -1,0 +1,38 @@
+.publish-page .page-title { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; }
+.publish-page .page-subtitle { color: var(--text-secondary); font-size: 1.1rem; margin-top: 8px; }
+.publish-form { margin-top: 32px; }
+.publish-grid { display: grid; grid-template-columns: 400px 1fr; gap: 32px; align-items: start; }
+.form-section-title { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; }
+.color-picker { display: flex; gap: 10px; flex-wrap: wrap; }
+.color-swatch {
+  width: 36px; height: 36px; border-radius: 50%; border: 3px solid transparent;
+  transition: all var(--transition-fast); cursor: pointer;
+}
+.color-swatch:hover { transform: scale(1.15); }
+.color-swatch.active { border-color: white; box-shadow: 0 0 12px rgba(255,255,255,0.3); }
+.cover-preview {
+  margin-top: 20px; border-radius: var(--radius-lg); height: 200px; position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  overflow: hidden; color: white; text-align: center;
+}
+.chapters-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.chapters-header .form-section-title { margin-bottom: 0; }
+.publish-chapters { display: flex; flex-direction: column; gap: 20px; }
+.chapter-editor-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.chapter-number {
+  font-size: 0.85rem; font-weight: 700; color: var(--accent-primary);
+  background: rgba(139, 92, 246, 0.15); padding: 4px 12px; border-radius: 100px;
+}
+.remove-chapter-btn {
+  background: none; color: var(--text-muted); font-size: 1.1rem;
+  transition: color var(--transition-fast); padding: 4px 8px;
+}
+.remove-chapter-btn:hover { color: var(--error); }
+.chapter-textarea { min-height: 250px; }
+.publish-actions { margin-top: 40px; display: flex; justify-content: center; }
+@media (max-width: 900px) {
+  .publish-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .publish-page .page-title { font-size: 1.8rem; }
+}
